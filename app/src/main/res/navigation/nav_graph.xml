@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.myshop.presentation.startScreen.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signInAppleFragment"
+            app:destination="@id/signInAppleFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signInGoogleFragment"
+            app:destination="@id/signInGoogleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.myshop.presentation.startScreen.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
+    <fragment
+        android:id="@+id/signInAppleFragment"
+        android:name="com.example.myshop.presentation.startScreen.SignInAppleFragment"
+        android:label="fragment_sign_in_apple"
+        tools:layout="@layout/fragment_sign_in_apple" />
+    <fragment
+        android:id="@+id/signInGoogleFragment"
+        android:name="com.example.myshop.presentation.startScreen.SignInGoogleFragment"
+        android:label="fragment_sign_in_google"
+        tools:layout="@layout/fragment_sign_in_google" />
+</navigation>
