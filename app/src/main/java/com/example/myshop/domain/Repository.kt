@@ -1,7 +1,5 @@
 package com.example.myshop.domain
 
-import androidx.lifecycle.LiveData
-import com.example.myshop.data.models.latest.Latest
 import com.example.myshop.domain.models.DetailModel
 import com.example.myshop.domain.models.FlashSaleModel
 import com.example.myshop.domain.models.LatestModel

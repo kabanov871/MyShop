@@ -1,7 +1,6 @@
 package com.example.myshop.di
 
 import android.app.Application
-import com.example.myshop.presentation.secondScreen.ChatFragment
 import com.example.myshop.presentation.secondScreen.DetailFragment
 import com.example.myshop.presentation.secondScreen.HomeFragment
 import com.example.myshop.presentation.startScreen.LogInFragment

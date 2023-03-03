@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myshop.R
-import com.example.myshop.data.models.latest.Latest
-import com.example.myshop.databinding.BrandsItemBinding
 import com.example.myshop.databinding.LatestItemBinding
 import com.example.myshop.domain.models.LatestModel
 import com.squareup.picasso.Picasso

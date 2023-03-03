@@ -1,6 +1,5 @@
 package com.example.myshop.presentation.secondScreen
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myshop.R
 import com.example.myshop.databinding.FragmentHomeBinding
-import com.example.myshop.domain.models.DetailModel
-import com.example.myshop.domain.models.FlashSaleModel
 import com.example.myshop.domain.models.LatestModel
 import com.example.myshop.presentation.MyApp
 import com.example.myshop.presentation.utils.Status

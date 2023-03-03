@@ -16,7 +16,6 @@ import com.example.myshop.domain.models.UserModel
 import com.example.myshop.presentation.MyApp
 import com.example.myshop.presentation.ViewModelFactory
 import com.example.myshop.presentation.secondScreen.MainActivity
-import com.example.myshop.presentation.viewModels.HomeViewModel
 import com.example.myshop.presentation.viewModels.UserViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

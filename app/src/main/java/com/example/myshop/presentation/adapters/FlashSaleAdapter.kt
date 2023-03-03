@@ -1,18 +1,13 @@
 package com.example.myshop.presentation.adapters
 
 import android.annotation.SuppressLint
-import android.app.Application
-import android.content.Context
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myshop.R
 import com.example.myshop.databinding.FlashSaleItemBinding
-import com.example.myshop.domain.models.DetailModel
 import com.example.myshop.domain.models.FlashSaleModel
-import com.example.myshop.presentation.secondScreen.MainActivity
 import com.squareup.picasso.Picasso
 
 class FlashSaleAdapter(

@@ -3,7 +3,6 @@ package com.example.myshop.data.network
 import com.example.myshop.data.models.detail.DetailApiModel
 import com.example.myshop.data.models.flashSale.FlashSaleApiModel
 import com.example.myshop.data.models.latest.LatestApiModel
-import retrofit2.Response
 import retrofit2.http.GET
 
 interface ApiInterface {
