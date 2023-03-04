@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class Mapper @Inject constructor() {
 
-    private fun mapLatestToLatestModel(model: Latest) = LatestModel(
+    fun mapLatestToLatestModel(model: Latest) = LatestModel(
         category = model.category,
         image_url = model.image_url,
         name = model.name,
@@ -23,7 +23,7 @@ class Mapper @Inject constructor() {
         mapLatestToLatestModel(it)
     }
 
-    private fun mapFlashSaleToFlashSaleModel(model: FlashSale) = FlashSaleModel(
+    fun mapFlashSaleToFlashSaleModel(model: FlashSale) = FlashSaleModel(
         category = model.category,
         discount = model.discount,
         image_url = model.image_url,

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id("de.mannodermaus.android-junit5") version "1.8.2.1"
 }
 
 android {
@@ -38,6 +39,7 @@ android {
 
 dependencies {
 
+    testImplementation 'org.junit.jupiter:junit-jupiter'
     def room_version = "2.5.0"
     def coroutines_version = "1.6.4"
     def dagger_version = "2.38.1"
@@ -53,6 +55,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    testImplementation "io.mockk:mockk:1.12.4"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
