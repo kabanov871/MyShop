@@ -7,15 +7,15 @@ import com.example.myshop.domain.useCases.InsertUserUseCase
 import javax.inject.Inject
 
 class UserViewModel @Inject constructor(
-    private val insertUserUseCase: InsertUserUseCase,
-    private val checkUserUseCase: CheckUserUseCase
+    private val insertUserUseCase: com.example.myshop.domain.useCases.InsertUserUseCase,
+    private val checkUserUseCase: com.example.myshop.domain.useCases.CheckUserUseCase
 ): ViewModel() {
 
     fun checkUser(firstName: String): Boolean {
         return checkUserUseCase.checkUser(firstName)
     }
 
-    suspend fun insertUser(model: UserModel) {
+    suspend fun insertUser(model: com.example.myshop.domain.models.UserModel) {
         insertUserUseCase.insertUser(model)
     }
 }

@@ -10,9 +10,9 @@ import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    private val getLatestUseCase: GetLatestUseCase,
-    private val getFlashSaleUseCase: GetFlashSaleUseCase,
-    private val getDetailUseCase: GetDetailUseCase
+    private val getLatestUseCase: com.example.myshop.domain.useCases.GetLatestUseCase,
+    private val getFlashSaleUseCase: com.example.myshop.domain.useCases.GetFlashSaleUseCase,
+    private val getDetailUseCase: com.example.myshop.domain.useCases.GetDetailUseCase
 ): ViewModel() {
 
     fun getLatest() = liveData(Dispatchers.IO) {

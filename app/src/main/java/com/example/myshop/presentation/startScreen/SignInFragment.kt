@@ -71,12 +71,14 @@ class SignInFragment : Fragment() {
                                     binding.firstNameText.error = resources.getString(R.string.exists)
                                 }
                             } else {
-                                 viewModel.insertUser(UserModel(
-                                     0,
-                                     binding.firstNameText.text.toString(),
-                                     binding.lastNameText.text.toString(),
-                                     binding.emailText.text.toString()
-                                 ))
+                                 viewModel.insertUser(
+                                     com.example.myshop.domain.models.UserModel(
+                                         0,
+                                         binding.firstNameText.text.toString(),
+                                         binding.lastNameText.text.toString(),
+                                         binding.emailText.text.toString()
+                                     )
+                                 )
                                  startActivity(Intent(activity, MainActivity::class.java))
                                  activity?.finish()
                             }
