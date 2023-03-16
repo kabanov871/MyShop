@@ -17,14 +17,14 @@ interface DataModule {
 
     @Binds
     @ApplicationScope
-    fun bindRepository(impl: RepositoryImpl): Repository
+    fun bindRepository(impl: com.example.myshop.data.repository.RepositoryImpl): com.example.myshop.domain.Repository
 
     companion object {
 
         @Provides
         @ApplicationScope
-        fun provideUserDao(application: Application): UserDao {
-            return ShopDatabase.getInstance(application).userDao
+        fun provideUserDao(application: Application): com.example.myshop.data.database.UserDao {
+            return com.example.myshop.data.database.ShopDatabase.getInstance(application).userDao
         }
 
         @Provides
@@ -32,11 +32,11 @@ interface DataModule {
 
         @Provides
         @ApplicationScope
-        fun provideRetrofit(baseUrl: String): ApiInterface =
+        fun provideRetrofit(baseUrl: String): com.example.myshop.data.network.ApiInterface =
             Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-                .create(ApiInterface::class.java)
+                .create(com.example.myshop.data.network.ApiInterface::class.java)
     }
 }

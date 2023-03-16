@@ -14,12 +14,12 @@ class FlashSaleAdapter(
     private val openDetailFragment:() -> Unit
 ): RecyclerView.Adapter<FlashSaleAdapter.FlashSaleHolder>() {
 
-    private val flashSaleList = ArrayList<FlashSaleModel>()
+    private val flashSaleList = ArrayList<com.example.myshop.domain.models.FlashSaleModel>()
 
     class FlashSaleHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = FlashSaleItemBinding.bind(item)
         @SuppressLint("SetTextI18n")
-        fun bind(model: FlashSaleModel, openDetailFragment:() -> Unit) = with(binding) {
+        fun bind(model: com.example.myshop.domain.models.FlashSaleModel, openDetailFragment:() -> Unit) = with(binding) {
             val getImage = model.image_url
             Picasso.get().load(getImage).into(imageFlashSale)
             textViewDiscount.text = "${model.discount}% off"
@@ -48,7 +48,7 @@ class FlashSaleAdapter(
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list: List<FlashSaleModel>) {
+    fun setList(list: List<com.example.myshop.domain.models.FlashSaleModel>) {
         flashSaleList.clear()
         flashSaleList.addAll(list)
         notifyDataSetChanged()

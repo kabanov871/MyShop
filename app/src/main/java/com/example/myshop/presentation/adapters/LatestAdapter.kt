@@ -12,11 +12,11 @@ import com.squareup.picasso.Picasso
 
 class LatestAdapter: RecyclerView.Adapter<LatestAdapter.LatestHolder>() {
 
-    private val latestList = ArrayList<LatestModel>()
+    private val latestList = ArrayList<com.example.myshop.domain.models.LatestModel>()
 
     class LatestHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = LatestItemBinding.bind(item)
-        fun bind(model: LatestModel) = with(binding) {
+        fun bind(model: com.example.myshop.domain.models.LatestModel) = with(binding) {
             val getImage = model.image_url
             Picasso.get().load(getImage).into(imageProduct)
             textViewCategory.text = model.category
@@ -41,7 +41,7 @@ class LatestAdapter: RecyclerView.Adapter<LatestAdapter.LatestHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list: List<LatestModel>) {
+    fun setList(list: List<com.example.myshop.domain.models.LatestModel>) {
         latestList.clear()
         latestList.addAll(list)
         notifyDataSetChanged()

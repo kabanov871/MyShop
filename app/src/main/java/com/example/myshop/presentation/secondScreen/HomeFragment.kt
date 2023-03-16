@@ -87,7 +87,7 @@ class HomeFragment : Fragment() {
             }
         }
     }
-    private fun getFlashSale(listLatest: List<LatestModel>) {
+    private fun getFlashSale(listLatest: List<com.example.myshop.domain.models.LatestModel>) {
 
         viewModel.getFlashSale().observe(viewLifecycleOwner) {
             it?.let { resource ->
